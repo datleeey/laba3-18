@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace laba3_18
@@ -42,8 +35,8 @@ namespace laba3_18
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Обробляємо рядки, щоб знайти мінімальні елементи та замінити значення рядків
-            ProcessRows();
+            // Обробляємо масив, щоб знайти максимальний за модулем елемент і додати його до всіх елементів
+            ProcessArray();
             DisplayArray();
         }
 
@@ -56,7 +49,7 @@ namespace laba3_18
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    array[i, j] = rand.Next(1, 100); // Випадкові значення від 1 до 100
+                    array[i, j] = rand.Next(-100, 100); // Випадкові значення від -100 до 100
                 }
             }
         }
@@ -77,20 +70,25 @@ namespace laba3_18
             }
         }
 
-        private void ProcessRows()
+        private void ProcessArray()
         {
-            // Знаходження мінімального елемента в кожному рядку та заміна всіх елементів на мінімальний
+            // Знаходження найбільшого за модулем елемента в масиві
+            int maxAbsoluteValue = Math.Abs(array[0, 0]);
             for (int i = 0; i < rows; i++)
             {
-                int min = array[i, 0];
-                for (int j = 1; j < columns; j++)
-                {
-                    if (array[i, j] < min)
-                        min = array[i, j];
-                }
                 for (int j = 0; j < columns; j++)
                 {
-                    array[i, j] = min;
+                    if (Math.Abs(array[i, j]) > maxAbsoluteValue)
+                        maxAbsoluteValue = Math.Abs(array[i, j]);
+                }
+            }
+
+            // Додавання найбільшого за модулем елемента до кожного елемента масиву
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    array[i, j] += maxAbsoluteValue;
                 }
             }
         }

@@ -42,7 +42,8 @@
             this.масивиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -52,30 +53,32 @@
             this.одновимірнийМасивToolStripMenuItem,
             this.двовимірнийМасивToolStripMenuItem});
             this.масивиToolStripMenuItem.Name = "масивиToolStripMenuItem";
-            this.масивиToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.масивиToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.масивиToolStripMenuItem.Text = " Масиви";
+            this.масивиToolStripMenuItem.Click += new System.EventHandler(this.масивиToolStripMenuItem_Click);
             // 
             // одновимірнийМасивToolStripMenuItem
             // 
             this.одновимірнийМасивToolStripMenuItem.Name = "одновимірнийМасивToolStripMenuItem";
-            this.одновимірнийМасивToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.одновимірнийМасивToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.одновимірнийМасивToolStripMenuItem.Text = "Одновимірний масив";
             this.одновимірнийМасивToolStripMenuItem.Click += new System.EventHandler(this.одновимірнийМасивToolStripMenuItem_Click);
             // 
             // двовимірнийМасивToolStripMenuItem
             // 
             this.двовимірнийМасивToolStripMenuItem.Name = "двовимірнийМасивToolStripMenuItem";
-            this.двовимірнийМасивToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.двовимірнийМасивToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.двовимірнийМасивToolStripMenuItem.Text = "Двовимірний масив";
             this.двовимірнийМасивToolStripMenuItem.Click += new System.EventHandler(this.двовимірнийМасивToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);

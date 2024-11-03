@@ -32,5 +32,10 @@ namespace laba3_18
             form3.FormClosed += (s, args) => this.Show();
             form3.Show();
         }
+
+        private void масивиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
